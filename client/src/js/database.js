@@ -15,23 +15,34 @@ const initdb = async () =>
 		}
 	});
 
-// adding content to database
+// add/update content to database
 export const putDb = async (content) => {
-	// get the db (v.1)
-	const jateDB = await openDB("jateDB", 1);
-	// make a transation
-	const tx = jateDB.transaction("jate", "readwrite");
-	// make a store
-	const store = tx.objectStore("jate");
-	// make the request to put content into the db
-	const request = store.put({ id: 1, content });
-	// await the result of the request
-	const result = await request;
-	// if successful, send the following message
+	// start with a message
+	console.log("Updating content...");
+
+	const jateDB = await openDB("jateDB", 1); // get the database, v.1
+	const tx = jateDB.transaction("jate", "readwrite"); // make a transation
+	const store = tx.objectStore("jate"); // connect to an object store
+	const request = store.put({ id: 1, content }); // make request to (re)write content into ID: 1 in the db
+	const result = await request; // await the result of the request
+
+	// if successful, send the result
 	console.log("Content saved to database:", result.content);
 };
 
-// TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => console.error("getDb not implemented");
+// get all the content from the database
+export const getDb = async () => {
+	// start with a message
+	console.log("Getting saved content...");
+
+	const jateDB = await openDB("jateDB", 1); // get the db, v.1
+	const tx = jateDB.transaction("jate", "readonly"); // make a read-only transaction
+	const store = tx.objectStore("jate"); // connect to an object store
+	const request = store.get(1); // request to get something out of the db
+	const result = await request; // await the request
+
+	// if successful, send the result
+	console.log("Result retrieved:", result.content);
+};
 
 initdb();
