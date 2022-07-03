@@ -1,7 +1,7 @@
 import { openDB } from "idb";
 
 const initdb = async () =>
-	// create a new db called 'jateDB'
+	// create a new db called 'jate'
 	openDB("jate", 1, {
 		upgrade(db) {
 			// add an object store called 'jate'
@@ -27,7 +27,7 @@ export const putDb = async (content) => {
 	const result = await request; // await the result of the request
 
 	// if successful, send the result
-	console.log("Content saved to database:", result.content);
+	console.log("Content saved to database:", result);
 };
 
 // get all the content from the database
@@ -41,8 +41,9 @@ export const getDb = async () => {
 	const request = store.get(1); // request to get something out of the db
 	const result = await request; // await the request
 
-	// if successful, send the result
-	console.log("Result retrieved:", result.content);
+	result
+		? console.log("Result retrieved:", result) // if data exists, send data
+		: console.log("No edits yet."); // if no data, send msg
 };
 
 initdb();

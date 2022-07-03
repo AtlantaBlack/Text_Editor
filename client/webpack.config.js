@@ -30,7 +30,7 @@ module.exports = () => {
 			// plugin to inject custom service worker
 			new InjectManifest({
 				swSrc: "./src-sw.js",
-				swDest: "src-sw.js"
+				swDest: "./src-sw.js"
 			}),
 
 			// plugin to create manifest.json file
