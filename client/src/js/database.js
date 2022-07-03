@@ -7,11 +7,11 @@ const initdb = async () =>
 			// add an object store called 'jate'
 			// if if exists already, do nothing
 			if (db.objectStoreNames.contains("jate")) {
-				console.log("jate database already exists");
+				console.log("Found: JATE database.");
 				return;
 			}
 			db.createObjectStore("jate", { keyPath: "id", autoIncrement: true });
-			console.log("jate database created");
+			console.log("Created: JATE database.");
 		}
 	});
 
@@ -33,7 +33,7 @@ export const putDb = async (content) => {
 // get all the content from the database
 export const getDb = async () => {
 	// start with a message
-	console.log("Getting saved content...");
+	console.log("Getting content...");
 
 	const jateDB = await openDB("jate", 1); // get the db, v.1
 	const tx = jateDB.transaction("jate", "readonly"); // make a read-only transaction
@@ -42,8 +42,8 @@ export const getDb = async () => {
 	const result = await request; // await the request
 
 	result
-		? console.log("Result retrieved:", result) // if data exists, send data
-		: console.log("No edits yet."); // if no data, send msg
+		? console.log(`Results retrieved:\n${result.content}`) // if data exists, send data
+		: console.log("Results retrieved: No edits yet."); // if no data, send msg
 };
 
 initdb();
