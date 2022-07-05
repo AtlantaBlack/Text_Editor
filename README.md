@@ -34,7 +34,7 @@ This application uses the following technologies:
 
 ## Installation
 
-If you are using the **[application deployed on Heroku]()** in the browser, then no installation is required. If you wish to install the application and use it offline, simply click the install button in the application header and save it to your local machine.
+If you are using the **[application deployed on Heroku](https://alluring-kenai-fjords-57043.herokuapp.com/)** in the browser, then no installation is required. If you wish to install the application and use it offline, simply click the install button in the application header and save it to your local machine.
 
 If you wish to use the application locally, you may clone or download the [JATE Git repository](). Then, navigate into the folder using Terminal/CLI and follow the steps below in the root directory of the application:
 
@@ -44,7 +44,7 @@ If you wish to use the application locally, you may clone or download the [JATE 
 
 ## Usage
 
-JATE is deployed on Heroku: **[check it out now!]()**
+JATE is deployed on Heroku: **[check it out now!](https://alluring-kenai-fjords-57043.herokuapp.com/)**
 
 You will be able to write your code snippets in the text editor. To save your work, click outside the text area (for example, click the header); the application will remember your notes for the next time you open it. You may install the application by clicking the install button.
 
