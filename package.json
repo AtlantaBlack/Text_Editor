@@ -9,7 +9,10 @@
 		"server": "cd server && npm start",
 		"build": "cd client && npm run build",
 		"install": "concurrently \"cd server && npm install\" \"cd client && npm install\"",
-		"client": "cd client && npm start"
+		"client": "cd client && npm start",
+		"heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+		"heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
+		"heroku-cleanup": "cd client && npm install --dev"
 	},
 	"keywords": [
 		"text",
