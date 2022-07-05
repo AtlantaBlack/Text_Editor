@@ -105,6 +105,7 @@ This project is licensed under the [MIT License](./LICENSE.txt).
 - [Workbox Modules (recipes, strategies)](https://developer.chrome.com/docs/workbox/modules)
 - [Google Chrome Developers - Caching your fonts, images and pages](https://www.youtube.com/watch?v=utxTqssjp-o&t=157s)
 - [Stack Overflow - Loading a favicon using HTML Webpack Plugin](https://stackoverflow.com/questions/52024445/index-html-template-isnt-loading-favicon-for-htmlwebpackplugin/66761341#66761341)
+- [Stack Overflow: Include devDependencies when deploying to Heroku](https://stackoverflow.com/questions/22954782/how-can-i-make-heroku-install-devdependencies?fbclid=IwAR0Bf3EEO05b6LJ2QscWrCa2L6CtMWlsXfGYNMWLVN739G18kgtmGt5Gqqs&answertab=scoredesc#tab-top)
 
 ## Contact
 
