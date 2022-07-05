@@ -61,9 +61,9 @@ module.exports = () => {
 					test: /\.css$/i, // test for .css files and use mini-css plugin on them
 					use: [MiniCssExtractPlugin.loader, "css-loader"]
 				},
-				// target: favicon - ref: https://stackoverflow.com/a/66761341
+				// target: favicon (grab the icon and import it into bundler file)
+				// ref: https://stackoverflow.com/a/66761341
 				{
-					// grab the icon and import it into bundler file
 					test: /\.ico$/i,
 					type: "asset/resource",
 					// Use 'generator' to output unique name (based on webpack pattern e.g. [name], [ext], etc.)
