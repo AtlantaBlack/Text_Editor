@@ -194,7 +194,7 @@ h1 {
 
 /* to aid in toggling hide or display for an element */
 .hidden {
-	display: none;
+	visibility: hidden;
 }
 
 @media only screen and (max-width: 600px) {
