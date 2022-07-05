@@ -41,3 +41,25 @@ registerRoute(
 		]
 	})
 );
+
+// image caching
+// ref: Unpacking the Workbox - caching fonts, images & pages
+// https://youtu.be/utxTqssjp-o?t=157
+const matchCallback = ({ request }) => request.destination === "image";
+
+registerRoute(
+	matchCallback,
+	new CacheFirst({
+		cacheName: "image-cache",
+		plugins: [
+			new CacheableResponsePlugin({
+				statuses: [0, 200]
+			}),
+			new ExpirationPlugin({
+				// list entries first followed by age
+				maxEntries: 5, // max number of entries
+				maxAgeSeconds: 30 * 24 * 60 * 60 // max age in seconds
+			})
+		]
+	})
+);

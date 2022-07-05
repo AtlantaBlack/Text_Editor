@@ -21,6 +21,7 @@ module.exports = () => {
 			// webpack plugin for generating the index.html file and injecting bundles
 			new HtmlWebpackPlugin({
 				template: "./index.html",
+				favicon: "./favicon.ico",
 				title: "JATE"
 			}),
 
@@ -30,7 +31,7 @@ module.exports = () => {
 			// plugin to inject custom service worker
 			new InjectManifest({
 				swSrc: "./src-sw.js",
-				swDest: "./src-sw.js"
+				swDest: "src-sw.js"
 			}),
 
 			// plugin to create manifest.json file
@@ -59,6 +60,16 @@ module.exports = () => {
 				{
 					test: /\.css$/i, // test for .css files and use mini-css plugin on them
 					use: [MiniCssExtractPlugin.loader, "css-loader"]
+				},
+				// target: favicon - ref: https://stackoverflow.com/a/66761341
+				{
+					// grab the icon and import it into bundler file
+					test: /\.ico$/i,
+					type: "asset/resource",
+					// Use 'generator' to output unique name (based on webpack pattern e.g. [name], [ext], etc.)
+					generator: {
+						filename: "[name][ext][query]"
+					}
 				},
 				{
 					test: /\.m?js$/,

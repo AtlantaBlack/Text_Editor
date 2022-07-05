@@ -192,6 +192,7 @@ h1 {
 	background-color: #31a9e1;
 }
 
+/* to aid in toggling hide or display for an element */
 .hidden {
 	display: none;
 }
