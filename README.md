@@ -1,10 +1,10 @@
-# (Just Another) Text Editor
+# Just Another Text Editor
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-**(Just Another) Text Editor** – JATE for short – is a convenient, in-browser application that allows users to write and save code snippets wherever they may be. Install the app on your device and use it on the go – it will even work offline!
+**Just Another Text Editor** – JATE for short – is a convenient, in-browser application that allows users to write and save code snippets wherever they may be. Install the app on your device and use it on the go – it will even work offline!
 
 The app is a single-page application that meets PWA criteria, uses idb for storing and retrieving data from an IndexedDB database, and service workers for data persistence in the event of a network disruption.
 
@@ -50,11 +50,47 @@ You will be able to write your code snippets in the text editor. To save your wo
 
 ## Demo
 
-demo
+Gif: Demo of JATE app being installed via button, and being used
+
+![Demo of JATE app](assets/images/demo-jate-app.gif?raw=true "Demo of JATE app")
 
 ## Screenshots
 
-screenshots
+**Viewing JATE app (main)**
+
+![Screenshot of JATE app: Main](assets/images/screenshot-jate-app.jpg?raw=true "Screenshot of JATE app: Main")
+
+---
+
+**Adding content to JATE**
+
+![Screenshot of JATE app: Adding content](assets/images/screenshot-content.jpg?raw=true "Screenshot of JATE app: Adding content")
+
+---
+
+**Viewing JATE database and caches in console**
+
+![Screenshot of JATE app: Database and caches](assets/images/screenshot-caches.jpg?raw=true "Screenshot of JATE app: Database and caches")
+
+---
+
+**Viewing JATE manifest in console**
+
+![Screenshot of JATE app: Manifest](assets/images/screenshot-manifest.jpg?raw=true "Screenshot of JATE app: Manifest")
+
+---
+
+**JATE app: Online**
+
+![Screenshot of JATE app: Online](assets/images/screenshot-online.jpg?raw=true "Screenshot of JATE app: Online")
+
+---
+
+**JATE app: Offline**
+
+![Screenshot of JATE app: Offline](assets/images/screenshot-offline.jpg?raw=true "Screenshot of JATE app: Offline")
+
+---
 
 ## License
 
